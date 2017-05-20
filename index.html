@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>游戏界面</title>
+    <link rel="stylesheet" href="css/play.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="js/jQuery1.8.2.js"></script>
+    <script src="js/play.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div id="timeWrap">
+            <span class="second">02</span>
+            <span class="mSecond">00</span>
+        </div>
+        <img src="images/accuracy.png" id="accuracy" />
+        <div id="boxWrap"></div>
+        <div id="score"></div>
+        <div id="bottomBar">
+            <img src="images/pointer.png" class="pointer" />
+            <img src="images/bottomHold.png" class="bottomHold" />
+            <img src="images/milk1.png" class="milk" data-state="left" />
+            <img src="images/milk2.png" class="milk" data-state="center" />
+            <img src="images/milk3.png" class="milk" data-state="right" />
+            <img src="images/false1.png" class="milk" data-state="backleft" />
+            <img src="images/false2.png" class="milk" data-state="backcenter" />
+            <img src="images/false3.png" class="milk" data-state="backright" />
+            <img src="images/bottomArrow.png" class="bottomArrow" />
+        </div>
+    </div>
+    <audio src="audio/bg.mp3" loop="loop" id="player" data-state="stop"></audio>
+    <div id="timeMask" style="z-index:1"></div>
+</body>
+</html>

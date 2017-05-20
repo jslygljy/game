@@ -1,0 +1,297 @@
+﻿html,body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family:"黑体";
+}
+
+img
+{
+    display: block;
+}
+
+.wrap
+{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: url("../images/wrapBg.jpg") no-repeat bottom;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/*时间*/
+
+#timeWrap
+{
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 30%;
+    height: 0;
+    padding-bottom: 20%;
+    background: url("../images/timeBg.png") no-repeat center;
+    background-size: 100%;
+    z-index: 10;
+    color: #333;
+    font-weight: bolder;
+    font-size: 7vw;
+}
+
+#timeWrap .second
+{
+    position: absolute;
+    top: 33%;
+    left: 18%;
+}
+
+#timeWrap .mSecond
+{
+    position: absolute;
+    top: 33%;
+    right: 20%;
+}
+
+#accuracy
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 20%;
+    width: 50%;
+    z-index: 9;
+}
+
+#boxWrap
+{
+    position: absolute;
+    margin: auto;
+    left: 0%;
+    top: 19%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    z-index: 8;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.box
+{
+    position: absolute;
+    display: inline-block !important;
+    left: 100%;
+    width: 35%;
+    height: 0;
+    padding-bottom: 45%;
+    z-index: 8;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.box .innerImage
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+#bottomBar
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 4%;
+    width: 80%;
+    height: 0;
+    padding-bottom: 45%;
+    z-index: 10;
+}
+
+.bottomHold
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 2%;
+    width: 100%;
+    z-index: 11;
+}
+
+.milk
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 37%;
+    bottom: 0;
+    height: 35%;
+    -webkit-transition: all ease-in-out 0.15s;
+    -webkit-transform: scale(1.0) translateY(0);
+    z-index: 11;
+}
+
+.milk[data-state='left']
+{
+    left: -45% !important;
+    -webkit-transform: scale(1.2) !important;
+    z-index: 12 !important;
+}
+
+.milk[data-state='center']
+{
+    left: 5% !important;
+    -webkit-transform: scale(1.5) translateY(0) !important;
+    z-index: 13 !important;
+}
+
+.milk[data-state='right']
+{
+    top: 30% !important;
+    left: 60% !important;
+    -webkit-transform: scale(1.2) !important;
+    z-index: 12 !important;
+}
+
+.milk[data-state='backleft']
+{
+    top: 10% !important;
+    left: 30% !important;
+    -webkit-transform: scale(0.9) !important;
+    z-index: 11 !important;
+}
+
+.milk[data-state='backcenter']
+{
+    top: 10% !important;
+    left: -30% !important;
+    -webkit-transform: scale(0.8) !important;
+    z-index: 11 !important;
+}
+
+.milk[data-state='backright']
+{
+    top: 20% !important;
+    left: -80% !important;
+    -webkit-transform: scale(0.9) !important;
+    z-index: 11 !important;
+}
+
+
+.push { 
+    -webkit-animation: push 0.5s ease 0s normal both;
+}
+
+@-webkit-keyframes push {
+    0% { 
+        -webkit-transform: scale(1.6) translateY(0%);
+    }
+    75% { 
+        -webkit-transform: scale(0.4) translateY(-1200%);
+    }
+    100% { 
+        -webkit-transform: scale(0.2) translateY(-1200%);
+    }
+}
+
+
+
+.bottomArrow
+{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: -9%;
+    width: 40%;
+    overflow: hidden;
+    z-index: 15;
+    -webkit-animation: arrow 0.6s linear 1s infinite alternate both;
+}
+
+
+@-webkit-keyframes arrow {
+    0% { 
+        -webkit-transform: scaleX(1.1) translateX(5%);
+    }
+    100% { 
+        -webkit-transform: scaleX(1) translateX(-5%);
+    }
+}
+
+
+
+/*分数*/
+#score
+{
+    position: absolute;
+    margin: auto;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 15%;
+    width: 20%;
+    height: 0;
+    padding-bottom: 10%;
+    -webkit-animation-duration: 1.5s;
+    z-index: 20;
+    color: red;
+    font-size: 7vw;
+}
+
+
+/*指示*/
+.pointer { 
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 5%;
+    width: 10%;
+    -webkit-animation: pointer 0.6s linear 1s infinite alternate both;
+    -webkit-transform: translateY(0%);
+}
+
+@-webkit-keyframes pointer {
+    0% { 
+        -webkit-transform: translateY(-20%);
+    }
+    100% { 
+        -webkit-transform: translateY(20%);
+    }
+}
+
+
+/*背景遮罩*/
+#timeMask { 
+    position: absolute;
+    margin: auto;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    pointer-events: none;
+    background: rgba(0,0,0,0.5);
+    -webkit-animation: bright 40s linear 0s normal both;
+}
+
+@-webkit-keyframes bright{
+    0% { 
+        background: rgba(0,0,0,0.5);
+    }
+    100% { 
+        background: rgba(0,0,0,0);
+    }
+}
